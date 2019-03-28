@@ -6,6 +6,25 @@ en:
   remember: "Remember me on this computer"
   base:
     base_title: "Food & Drink"
+  generals:
+    categories: "Categories"
+    category: "Category"
+    products: "Products"
+    product: "Product"
+    order: "Order"
+    order_list: "Order list"
+    users: "Users"
+    food: "Food"
+    drink: "Drink"
+    admin: "admin"
+    active: "active"
+    admins: "Administrator"
+    client: "Client"
+    search: "Search"
+    my_history: "My History"
+    guest: "Guest"
+  users:
+    user_pic: "User picture"
   static_pages:
     home: "Home"
     contact: "Contact"
@@ -28,7 +47,7 @@ en:
     new:
       new_user: "New user? "
   helpers:
-    label:  
+    label:
       user:
         name: "Name"
         email: "Email"

@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  enum role: [:active, :adm]
+  enum role: {active: 0, admin: 1}
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i
   attr_accessor :remember_token
   validates :name,  presence: true, length:
@@ -17,7 +17,7 @@ class User < ApplicationRecord
   has_secure_password
 
   def self.digest string
-    if cost ActiveModel::SecurePassword.min_cost
+    if cost = ActiveModel::SecurePassword.min_cost
       BCrypt::Engine::MIN_COST
     else
       BCrypt::Engine.cost

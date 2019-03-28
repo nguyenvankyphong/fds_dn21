@@ -7,13 +7,17 @@
 
   <body>
     <%= render "layouts/header" %>
-    <div class="container">
-      <% flash.each do |message_type, message| %>
-        <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
-      <% end %>
-      <%= yield %>
-      <%= render "layouts/footer" %>
-      <%= debug(params) if Rails.env.development? %>
+    <div class="page-wrapper chiller-theme toggled">
+      <%= render "layouts/sidebar" %>
+      <div class="container">
+        <% flash.each do |message_type, message| %>
+          <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+        <% end %>
+        <main class="page-content main">
+        <%= yield %>
+        <%= render "layouts/footer" %>
+      </main>
+      </div>
     </div>
   </body>
 </html>
