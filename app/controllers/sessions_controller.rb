@@ -36,7 +36,7 @@ class SessionsController < ApplicationController
     if user.active?
       redirect_to welcome_path
     else
-      redirect_to admin_path
+      redirect_to admin_root_path
     end
   end
 end

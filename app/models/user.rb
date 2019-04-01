@@ -15,6 +15,7 @@ class User < ApplicationRecord
   has_many :orders
   has_many :rates
   has_secure_password
+  scope :sort_by_created_at, ->{order created_at: :asc}
 
   def self.digest string
     if cost = ActiveModel::SecurePassword.min_cost

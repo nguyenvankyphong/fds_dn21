@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
   before_action :load_user, except: [:index, :new, :create]
+  before_action :correct_user, only: [:edit, :update]
+
+  def index; end
+
   def show; end
 
   def new
@@ -17,6 +21,17 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit; end
+
+  def update
+    if @user.update_attributes user_params
+      flash[:success] = t "update"
+      redirect_to @user
+    else
+      render :edit
+    end
+  end
+
   private
 
   def load_user
@@ -27,7 +42,11 @@ class UsersController < ApplicationController
   end
 
   def user_params
-    params.require(:user).permit :name, :email, :password,
-      :password_confirmation
+    params.require(:user).permit :name, :email,
+      :address, :phone, :password, :password_confirmation
+  end
+
+  def correct_user
+    redirect_to root_path unless current_user? @user
   end
 end
