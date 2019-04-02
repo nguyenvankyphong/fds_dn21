@@ -4,7 +4,7 @@ class CreateProducts < ActiveRecord::Migration[5.2]
       t.string :name
       t.integer :category_id
       t.string :information
-      t.integer :prince
+      t.integer :price
       t.string :image_path
       t.integer :quantity
       t.boolean :is_deleted, default: false

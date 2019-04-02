@@ -5,6 +5,10 @@ ruby "2.5.1"
 
 gem "rubocop", "~> 0.54.0", require: false
 
+gem "bootstrap-sass", "3.3.7"
+
+gem "rails-i18n"
+
 gem "rails", "~> 5.2.2", ">= 5.2.2.1"
 
 gem "mysql2", ">= 0.4.4", "< 0.6.0"
