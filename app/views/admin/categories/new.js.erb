@@ -1,0 +1,4 @@
+var element = $(".category_new_form");
+if (element.html() == "")
+  element.html('<%= j render "new" %>');
+else element.html("");

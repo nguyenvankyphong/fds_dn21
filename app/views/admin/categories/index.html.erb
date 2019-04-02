@@ -1,0 +1,18 @@
+<% provide :title, t("categories.admin_title") %>
+  <div class="containter">
+    <div class="categories">
+      <%= link_to new_admin_category_path, remote: true, class: "category_add-btn" do %>
+        <span class="glyphicon glyphicon-plus"></span>
+        <%= t "categories.add_new" %>
+      <% end %>
+    <div class="row">
+      <div class="category_new_form"></div>
+    </div>
+    <div class="row categories_items">
+      <%= render @categories %>
+    </div>
+    <div class="row paginate">
+      <%= paginate @categories, theme: "twitter-bootstrap-4" %>
+    </div>
+  </div>
+</div>

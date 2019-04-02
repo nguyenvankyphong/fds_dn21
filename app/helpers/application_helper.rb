@@ -23,5 +23,4 @@ module ApplicationHelper
       render "layouts/guest_sidebar"
     end
   end
-
 end
