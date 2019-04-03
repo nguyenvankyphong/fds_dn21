@@ -1,0 +1,18 @@
+<% provide :title, t("products.admin_title") %>
+<div class="containter">
+  <div class="categories">
+    <%= link_to new_admin_product_path, remote: true, class: "category_add-btn" do %>
+      <span class="glyphicon glyphicon-plus"></span>
+      <%= t "products.add_new" %>
+    <% end %>
+    <div class="row">
+      <div class="category_new_form"></div>
+    </div>
+    <div class="row categories_items">
+      <%= render @products %>
+    </div>
+    <div class="row paginate">
+      <%= paginate @products, theme: "twitter-bootstrap-4" %>
+    </div>
+  </div>
+</div>
