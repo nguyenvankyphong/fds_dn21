@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
       else
         forget @user
       end
-      redirect_to @user
+      check_role @user
     else
       flash.now[:danger] = t "error1"
       render :new
@@ -30,5 +30,13 @@ class SessionsController < ApplicationController
     return if @user
     flash.now[:danger] = t "error"
     render :new
+  end
+
+  def check_role user
+    if user.active?
+      redirect_to welcome_path
+    else
+      redirect_to admin_path
+    end
   end
 end
