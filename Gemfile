@@ -5,6 +5,10 @@ ruby "2.3.1"
 
 gem "pry", "~> 0.12.2"
 
+gem "kaminari"
+
+gem "bootstrap4-kaminari-views"
+
 gem "bootstrap-sass", "3.3.7"
 
 gem "rails-i18n"
@@ -22,6 +26,10 @@ gem "mysql2", ">= 0.4.4", "< 0.6.0"
 gem "puma", "~> 3.11"
 
 gem "sass-rails", "~> 5.0"
+
+gem "carrierwave", "1.2.2"
+
+gem "mini_magick", "4.7.0"
 
 gem "uglifier", ">= 1.3.0"
 

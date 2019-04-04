@@ -3,3 +3,5 @@ email_length_max: 255
 password_length_min: 6
 gravatar_size: 80
 remember: "1"
+image_size_by_Mb: 5
+paging: 10

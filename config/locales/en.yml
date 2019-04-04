@@ -23,6 +23,16 @@ en:
     search: "Search"
     my_history: "My History"
     guest: "Guest"
+  flash:
+    created: "Created"
+    not_found: "Not found"
+    action_failed: "Action failed"
+  error:
+    image_too_big: "should be less than 5Mb"
+  categories:
+    category_name: "Category name"
+    admin_title: "Category | Admin"
+    add_new: "Add new category"
   users:
     user_pic: "User picture"
   static_pages:
@@ -56,3 +66,6 @@ en:
     submit:
       user:
         create: "Create my account"
+        submit: "Submit"
+      category:
+        submit: "Submit"
