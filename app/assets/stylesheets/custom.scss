@@ -35,6 +35,9 @@ body {
       padding-left: 200px;
       .page-content {
         padding-left: 50px;
+        .body-content {
+          min-height: 720px;
+        }
       }
     }
   }

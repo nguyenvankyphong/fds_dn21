@@ -1,5 +1,11 @@
 <% provide :title, t("products.admin_title") %>
 
+<% if logged_in? && current_user.active? %>
+  <%= link_to "#" do %>
+    <span class="glyphicon glyphicon-plus"><%= t "products.add_to_cart"%></span>
+  <% end %>
+<% end %>
+
 <h3><%= @product.name %></h3>
 <h5><%= t "products.price" %>: <%= @product.price %></h5>
 <h5><%= t "generals.category" %>: <%= @product.category.name %></h5>

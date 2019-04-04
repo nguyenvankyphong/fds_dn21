@@ -11,10 +11,10 @@ class Product < ApplicationRecord
   validate :picture_size
 
   default_scope{where(is_deleted: false)}
-
   scope :order_by_name, ->{order :name}
-
-
+  scope :load_child_products, (lambda do |category|
+    where category_id: category.id
+  end)
 
   private
 
