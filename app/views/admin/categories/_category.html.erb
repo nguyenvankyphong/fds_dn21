@@ -3,5 +3,5 @@
   <%= link_to admin_category_path(category), method: :delete, remote: true, class: "category_delete-btn" do %>
     <span class="glyphicon glyphicon-remove"></span>
   <% end %>
-  <%= image_tag category.picture.url if category.picture? %>
+  <%= image_tag category.picture.url %>
 </div>

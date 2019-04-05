@@ -1,0 +1,11 @@
+<% provide :title, t("products.admin_title") %>
+
+<h3><%= @product.name %></h3>
+<h5><%= t "products.price" %>: <%= @product.price %></h5>
+<h5><%= t "generals.category" %>: <%= @product.category.name %></h5>
+<h5><%= t "products.quantity" %>: <%= @product.quantity %></h5>
+<h5><%= t "products.info" %>: <%= @product.information %></h5>
+<div class="">
+  <%= image_tag @product.picture.url  %>
+</div>
+<%= link_to t("generals.edit"), edit_admin_product_path(@product) %>

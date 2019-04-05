@@ -1,0 +1,29 @@
+<%= form_for [:admin, @product],  remote: true do |f| %>
+  <%= render "./shared/general_error", object: f.object %>
+  <div class="col-md-4">
+    <div class="field">
+      <%= f.label :name %>
+      <%= f.text_field :name, placeholder: true %>
+    </div>
+    <div class="field">
+      <%= f.text_area :information, placeholder: true %>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <%= f.label :price %>
+    <%= f.text_field :price, placeholder: true %>
+    <%= f.select :category_id, load_categories(@categories) %>
+  </div>
+  <div class="col-md-4">
+    <div class="field">
+      <%= f.label :quantity %>
+      <%= f.text_field :quantity, placeholder: true %>
+    </div>
+    <span class="picture">
+      <%= f.file_field :picture%>
+    </span>
+  </div>
+  <div class="col-md-3">
+    <%= f.submit t("helpers.submit.category.submit"), class: "btn btn-primary" %>
+  </div>
+<% end %>

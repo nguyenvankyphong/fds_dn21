@@ -23,16 +23,29 @@ en:
     search: "Search"
     my_history: "My History"
     guest: "Guest"
+    edit: "Edit"
   flash:
     created: "Created"
     not_found: "Not found"
     action_failed: "Action failed"
+    updated: "Updated"
   error:
     image_too_big: "should be less than 5Mb"
+    count_errors:
+      one: "The form contains 1 error"
+      other: "The form contains %{count} errors"
   categories:
     category_name: "Category name"
     admin_title: "Category | Admin"
     add_new: "Add new category"
+  products:
+    add_new: "Add new product"
+    name: "Name"
+    info: "Information"
+    price: "Price"
+    quantity: "Quantity"
+    no_img: "No image"
+    admin_title: "Product | Admin"
   users:
     user_pic: "User picture"
   static_pages:
@@ -63,6 +76,17 @@ en:
         email: "Email"
         password: "Password"
         password_confirmation: "Password Confirmation"
+      product:
+        name: "Name"
+        information: "Infomation"
+        price: "Price"
+        quantity: "Quantity"
+    placeholder:
+      product:
+        name: "Name"
+        information: "Infomation"
+        price: "Price"
+        quantity: "Quantity"
     submit:
       user:
         create: "Create my account"
