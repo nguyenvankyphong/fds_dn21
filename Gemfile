@@ -1,17 +1,21 @@
 source "https://rubygems.org"
 git_source(:github){|repo| "https://github.com/#{repo}.git"}
 
-ruby "2.3.1"
+ruby "2.5.1"
 
 gem "pry", "~> 0.12.2"
 
 gem "kaminari"
+
+gem "bootstrap-kaminari-views"
 
 gem "bootstrap4-kaminari-views"
 
 gem "bootstrap-sass", "3.3.7"
 
 gem "rails-i18n"
+
+gem "ransack"
 
 gem "bcrypt", "3.1.12"
 

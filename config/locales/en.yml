@@ -4,6 +4,9 @@ en:
   check: "Please check your email to activate your account."
   the_form: "The form contains"
   remember: "Remember me on this computer"
+  update: "Profile updated"
+  delete: "User deleted"
+  undelete: "unsuccess delete"
   base:
     base_title: "Food & Drink"
   generals:
@@ -48,6 +51,19 @@ en:
     admin_title: "Product | Admin"
   users:
     user_pic: "User picture"
+    new:
+      name: "Name"
+      email: "Email"
+      password: "Password"
+      password_confirmation: "Password_confirmation"
+      create: "Create my account"
+    edit:
+      edit: "Edit user"
+      save: "Save changes"
+      update: "Update your profile"
+      change: "Change"
+    index:
+      all: "All users"
   static_pages:
     home: "Home"
     contact: "Contact"
@@ -74,6 +90,8 @@ en:
       user:
         name: "Name"
         email: "Email"
+        address: "Address"
+        phone: "Phone"
         password: "Password"
         password_confirmation: "Password Confirmation"
       product:
@@ -93,3 +111,20 @@ en:
         submit: "Submit"
       category:
         submit: "Submit"
+  admin:
+    users:
+      index:
+        all: "All users"
+        name: "NAME"
+        action: "ACTION"
+        index: "NO."
+        address: "ADDRESS"
+        phone: "PHONE"
+        email: "EMAIL"
+        delete_u: "delete"
+        confirm: "You sure?"
+      show:
+        social: "Social"
+        twitter: "Twitter"
+        google: "Google +"
+        facebook: "Facebook"
