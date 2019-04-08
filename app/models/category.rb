@@ -1,13 +1,16 @@
 class Category < ApplicationRecord
+  mount_uploader :picture, PictureUploader
+
   has_many :products
+
+  validate :picture_size
 
   default_scope{where(is_deleted: false)}
 
   scope :order_by_name, ->{order :name}
-
-  mount_uploader :picture, PictureUploader
-
-  validate :picture_size
+  scope :load_child_categories, (lambda do |category|
+    where parent_id: category.id
+  end)
 
   private
 
