@@ -1,0 +1,28 @@
+.order_summary {
+  .order_image {
+    width: 80px;
+  }
+
+  .order_product {
+    width: 35%;
+  }
+
+  .order_price {
+    width: 10%;
+    text-align: center;
+  }
+
+  .order_quantity {
+    width: 10%;
+    text-align: center;
+  }
+
+  .order_status {
+    width: 30%;
+    text-align: center;
+  }
+
+  .item {
+    padding: 35px;
+  }
+}

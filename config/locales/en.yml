@@ -44,6 +44,7 @@ en:
     my_history: "My History"
     guest: "Guest"
     edit: "Edit"
+    on: "on"
   flash:
     created: "Created"
     not_found: "Not found"
@@ -52,6 +53,11 @@ en:
     update_fail: "Can not update data"
     delete_fail: "Can not delete this item"
     out_of_index: "Out of index"
+    ordered: "Ordered"
+    order_faild: "Can not create order.Plz try again"
+    cannot_save: "Cannot save"
+    no_longer_sold: "Sorry, %{name} is no longer sold"
+    rescue_order_creating: "Oops, Error :((. Try again my fen"
   error:
     image_too_big: "should be less than 5Mb"
     count_errors:
@@ -66,6 +72,10 @@ en:
   carts:
     currency: "$"
     total: "Total"
+  order:
+    order_history: "Order History"
+    status: "Status"
+    order: "Order"
   products:
     add_new: "Add new product"
     name: "Name"
@@ -162,3 +172,8 @@ en:
         twitter: "Twitter"
         google: "Google +"
         facebook: "Facebook"
+  time:
+    formats:
+      default: "%a, %d %b %Y %H:%M:%S %z"
+      long: "%B %d, %Y %H:%M"
+      short: "%d %b %H:%M"

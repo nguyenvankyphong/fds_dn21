@@ -5,7 +5,10 @@
       <div class="page-title">
         <h2><%= t "cart_product" %></h2>
       </div>
-
+      <%= link_to client_orders_path, method: :post,
+        data: {confirm: t(".you_sure")} do %>
+        <span class="glyphicon glyphicon-shopping-cart"><%= t "order.order" %></span>
+      <% end %>
       <div class="order-product-content">
         <div class="table-responsive">
           <table class="table table-bordered cart_summary">

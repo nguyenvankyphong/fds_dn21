@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2019_04_03_140123) do
   end
 
   create_table "orders", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "status"
+    t.integer "status", default: 0
     t.integer "user_id"
     t.boolean "is_deleted", default: false
     t.datetime "created_at", null: false

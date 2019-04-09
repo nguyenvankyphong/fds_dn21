@@ -67,31 +67,30 @@ class Client::CartsController < Client::ClientsController
   end
 
   def update_existed_item product
-    session[:cart].each do |key, value|
-      next unless key.to_i == product.id
-      a = value.to_i
-      b = item_params[:quantity].to_i
-      a += b
-      session[:cart][key] = a
-      remain_quantity = product.quantity - b
-      return true if product.update_attribute :quantity, remain_quantity
-      flash[:danger] = t "flash.update_fail"
+    ActiveRecord::Base.transaction do
+      session[:cart].each do |key, value|
+        next unless key.to_i == product.id
+        session[:cart][key] = load_added_qty value, item_params[:quantity]
+        remain_qty = load_remain_qty product.quantity, item_params[:quantity]
+        return true if product.update_attribute :quantity, remain_qty
+        flash[:danger] = t "flash.update_fail"
+      end
     end
     false
   end
 
   def add_new_item product
     session[:cart][product.id] = item_params[:quantity].to_i
-    remain_quantity = product.quantity - item_params[:quantity].to_i
-    product.update_attribute :quantity, remain_quantity
+    remain_qty = load_remain_qty product.quantity, item_params[:quantity]
+    product.update_attribute :quantity, remain_qty
     flash[:success] = t "success_add"
   end
 
   def update_after_deleting product
     session[:cart].each do |key, value|
       next unless key == params[:id]
-      remain_quantity = product.quantity + value.to_i
-      if product.update_attribute :quantity, remain_quantity
+      added_quantity = load_added_qty product.quantity, value
+      if product.update_attribute :quantity, added_quantity
         session[:cart].except!(key)
       else
         flash[:danger] = t "flash.delete_fail"
@@ -99,4 +98,6 @@ class Client::CartsController < Client::ClientsController
       end
     end
   end
+
+  include MyModules::Carts
 end

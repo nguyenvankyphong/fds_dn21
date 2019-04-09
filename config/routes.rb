@@ -27,6 +27,7 @@ Rails.application.routes.draw do
   namespace :client do
     root "clients#index"
     resources :carts
+    resources :orders, only: [:create, :index]
   end
 
 end

@@ -1,0 +1,14 @@
+<tr>
+  <td class="">
+    <%= t "order.order" %>:
+    <%= l(order.created_at, format: :short) %>
+  </td>
+</tr>
+  <%= render partial: "order_product", collection: (order.order_products), as: :item %>
+<tr>
+<td class="">
+  <%= t "carts.total" %>:
+  <b><%= load_total_cost order %></b>
+  <%= t "carts.currency" %>
+</td>
+</tr>
