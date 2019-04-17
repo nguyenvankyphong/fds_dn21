@@ -32,17 +32,13 @@ class Admin::ProductsController < ApplicationController
     if @product.save
       flash[:info] = t "flash.created"
       @save = true
-      respond_to do |format|
-        format.html{redirect_to admin_products_path}
-        format.js
-      end
     else
       @save = false
       flash[:danger] = t "flash.action_failed"
-      respond_to do |format|
-        format.html{redirect_to admin_products_path}
-        format.js
-      end
+    end
+    respond_to do |format|
+      format.html{redirect_to admin_products_path}
+      format.js
     end
   end
 

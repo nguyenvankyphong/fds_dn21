@@ -25,7 +25,7 @@ module ApplicationHelper
   end
 
   def create_index params_page, index, per_page
-    params_page = Settings.per_index unless params_page
+    params_page = Settings.per_index || params_page
     ((params_page.to_i - Settings.per_index) * per_page.to_i) +
       index.to_i + Settings.per_index
   end

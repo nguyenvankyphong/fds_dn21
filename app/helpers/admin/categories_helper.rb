@@ -4,6 +4,6 @@ module Admin::CategoriesHelper
     categories.each do |c|
       categories_array.push([c.name, c.id])
     end
-    return categories_array
+    categories_array
   end
 end
