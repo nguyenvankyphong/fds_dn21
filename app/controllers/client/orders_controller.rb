@@ -15,6 +15,7 @@ class Client::OrdersController < Client::ClientsController
         create_order_product @product, value, @order.id
       end
       session[:cart].clear
+      send_order @order
       flash[:success] = t "flash.ordered"
       redirect_to client_orders_path
     end
@@ -48,5 +49,9 @@ class Client::OrdersController < Client::ClientsController
     return if order_product.save
     flash[:warning] = t "flash.cannot_save"
     redirect_to client_orders_path
+  end
+
+  def send_order order
+    OrderMailer.new_order(current_admin, current_user, order).deliver_later
   end
 end
