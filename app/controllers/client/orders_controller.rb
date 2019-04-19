@@ -1,5 +1,5 @@
 class Client::OrdersController < Client::ClientsController
-  before_action :current_order, only: [:create]
+  before_action :current_order, only: :create
 
   def index
     @orders = current_user.orders.order_by_created_time.page(params[:page]).per(

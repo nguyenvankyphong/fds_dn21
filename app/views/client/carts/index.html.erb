@@ -53,7 +53,7 @@
         </div>
         <div class="">
         <%= t "carts.total" %>:
-        <b><%= @total %></b> <%= t "carts.currency" %>
+        <b><%= number_to_currency(@total) %></b>
       </div>
         <div class="cart_navigation">
           <%= link_to products_path do %>
