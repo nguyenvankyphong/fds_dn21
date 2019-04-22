@@ -3,6 +3,8 @@ class Client::CartsController < Client::ClientsController
   before_action :load_product, only: %i(create destroy)
   before_action :reload_cart, only: :index
 
+  include MyModules::Carts
+
   def index; end
 
   def create
@@ -67,14 +69,12 @@ class Client::CartsController < Client::ClientsController
   end
 
   def update_existed_item product
-    ActiveRecord::Base.transaction do
-      session[:cart].each do |key, value|
-        next unless key.to_i == product.id
-        session[:cart][key] = load_added_qty value, item_params[:quantity]
-        remain_qty = load_remain_qty product.quantity, item_params[:quantity]
-        return true if product.update_attribute :quantity, remain_qty
-        flash[:danger] = t "flash.update_fail"
-      end
+    session[:cart].each do |key, value|
+      next unless key.to_i == product.id
+      session[:cart][key] = load_added_qty value, item_params[:quantity]
+      remain_qty = load_remain_qty product.quantity, item_params[:quantity]
+      return true if product.update_attribute :quantity, remain_qty
+      flash[:danger] = t "flash.update_fail"
     end
     false
   end
@@ -98,6 +98,4 @@ class Client::CartsController < Client::ClientsController
       end
     end
   end
-
-  include MyModules::Carts
 end
