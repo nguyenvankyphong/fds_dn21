@@ -58,6 +58,8 @@ en:
     cannot_save: "Cannot save"
     no_longer_sold: "Sorry, %{name} is no longer sold"
     rescue_order_creating: "Oops, Error :((. Try again my fen"
+    rate_success: "You've rated for this product"
+    rate_fail: "Cannot rate for this product"
   error:
     image_too_big: "should be less than 5Mb"
     count_errors:
@@ -76,6 +78,17 @@ en:
     order_history: "Order History"
     status: "Status"
     order: "Order"
+  rating:
+    rate: "Rate"
+    no_rating: "This product hasn't had any rate yet."
+    show_status:
+      zero: "This product hasn't had any rate yet."
+      one: "%{count}/%{standard}"
+      other: "%{count}/%{standard}"
+    comments:
+      zero: "No comment"
+      one: "Comment(1)"
+      other: "Comments(%{count})"
   products:
     add_new: "Add new product"
     name: "Name"

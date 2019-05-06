@@ -28,6 +28,7 @@ Rails.application.routes.draw do
     root "clients#index"
     resources :carts
     resources :orders, only: [:create, :index]
+    resources :rates, only: :create
   end
 
 end
