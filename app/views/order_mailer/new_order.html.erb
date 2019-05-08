@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+  </head>
+  <body>
+    <h6><%= t "order.mailer.hi" %><%= @admin.name %></h6>
+    <p>
+      <%= t "order.mailer.new_order" %>
+      <b><%= @user.name %></b>
+      <%= t "order.mailer.with" %>
+      <% @order.order_products.each do |item| %>
+        <div class="">
+          - <%= item.product_name %>: <%= item.quantity %>
+        </div>
+      <% end %>
+      <div class="">
+        <b><%= t "order.mailer.total_cost" %> <%= @total %></b>
+      </div>
+      <div class="">
+        <%= t "order.mailer.ordered_at" %><%= l(@order.created_at, format: :short) %>
+      </div>
+    </p>
+  </body>
+</html>

@@ -24,7 +24,7 @@ end
     category_id: category_ids[n])
 end
 
-User.create!(name: "Nguyen Chanh Huan", email: "admin@gmail.com", address: "DN",
+User.create!(name: "Nguyen Van Ky Phong", email: "nguyenvankyphong@gmail.com", address: "DN",
   phone: "0123456789", password: "111111", password_confirmation: "111111", role: 1)
 
 User.create!(name: "client", email: "client@gmail.com", address: "DN",

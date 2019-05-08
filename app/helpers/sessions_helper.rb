@@ -25,6 +25,12 @@ module SessionsHelper
     end
   end
 
+  def current_admin
+    @admin = User.find_by role: :admin
+    return if @admin
+    flash.now[:danger] = t "error"
+  end
+
   def logged_in?
     current_user.present?
   end
@@ -39,6 +45,7 @@ module SessionsHelper
     forget current_user
     session.delete :user_id
     @current_user = nil
+    session[:cart].clear
   end
 
   def redirect_back_or default
