@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+  before_action :authenticate_user!
   before_action :load_category, :load_products_by_category,
     :load_child_categories, only: :show
   before_action :load_all_categories, only: :index

@@ -13,7 +13,7 @@ module ApplicationHelper
   end
 
   def render_side_bar
-    if logged_in?
+    if user_signed_in?
       if current_user.admin?
         render "layouts/admin_sidebar"
       else
