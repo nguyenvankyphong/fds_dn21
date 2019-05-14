@@ -16,6 +16,8 @@ class Product < ApplicationRecord
     where category_id: category.id
   end)
 
+  delegate :name, to: :category, prefix: :category
+
   private
 
   def picture_size

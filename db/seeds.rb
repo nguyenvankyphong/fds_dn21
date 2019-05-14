@@ -24,7 +24,7 @@ end
     category_id: category_ids[n])
 end
 
-User.create!(name: "Nguyen Chanh Huan", email: "admin@gmail.com", address: "DN",
+User.create!(name: "Nguyen Van Ky Phong", email: "nguyenvankyphong@gmail.com", address: "DN",
   phone: "0123456789", password: "111111", password_confirmation: "111111", role: 1)
 
 User.create!(name: "client", email: "client@gmail.com", address: "DN",
@@ -45,10 +45,10 @@ end
 
 2.times do |n|
   users = [2, 3]
-  status = 3
+  status = [0, 3]
   Order.create!(
     user_id: users[n],
-    status: 3)
+    status: status[n])
 end
 
 4.times do |n|

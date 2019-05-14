@@ -10,3 +10,13 @@ sizeindex: 50
 per_index: 1
 lowest_quantity: 0
 paging_sm: 2
+rate_level: [1, 2, 3, 4, 5]
+rate_standard: 5
+order_status_ready: 0
+order_status_accepted: 1
+order_status_delivering: 2
+order_status_delivered: 3
+order_ready_label: "primary"
+order_accepted_label: "warning"
+order_delivering_label: "info"
+order_delivered_label: "success disabled"

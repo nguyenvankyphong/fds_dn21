@@ -1,0 +1,15 @@
+<div>
+  <b><%= rate.user.name %></b>
+  <%= l(rate.created_at, format: :short) %>
+  <div class="">
+    <% (1..rate.rate).each do |n| %>
+      <span class = "glyphicon glyphicon-star rate_star"></span>
+    <% end %>
+    <% (Settings.rate_standard - rate.rate).times do |n| %>
+      <span class = "glyphicon glyphicon-star-empty rate_star"></span>
+    <% end %>
+  </div>
+  <div class="">
+    <%= rate.comment %>
+  </div>
+</li>
