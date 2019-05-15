@@ -63,4 +63,5 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit :sign_up, keys: full_attrs
     devise_parameter_sanitizer.permit :sign_in, keys: added_attrs
   end
+
 end
