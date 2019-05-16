@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  ratyrate_rater
   devise :database_authenticatable, :registerable,
     :recoverable, :rememberable, :validatable, :confirmable
   enum role: {active: 0, admin: 1}
@@ -14,7 +15,6 @@ class User < ApplicationRecord
   before_save :downcase_email
   has_many :suggestions
   has_many :orders
-  has_many :rates
   scope :sort_by_created_at, ->{order created_at: :asc}
 
   private

@@ -1,5 +1,6 @@
 class Client::RatesController < Client::ClientsController
   def create
+    binding.pry
     @rate = Rate.new rate_params
     if @rate.save
       flash[:info] = t "flash.rate_success"

@@ -22,3 +22,5 @@
 //= require js/plugins.js
 //= require js/active.js
 //= require vendor/adminlte.min
+//= require jquery.raty
+//= require ratyrate

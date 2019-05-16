@@ -1,6 +1,5 @@
 class Client::ClientsController < ApplicationController
   before_action :user_permissions
-  authorize_resource
   def index; end
 
   def user_permissions

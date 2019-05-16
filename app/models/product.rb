@@ -1,7 +1,9 @@
 class Product < ApplicationRecord
   mount_uploader :picture, PictureUploader
 
-  has_many :rates
+  ratyrate_rateable "quality"
+
+  # has_many :rates
   has_many :order_products
   belongs_to :category
 

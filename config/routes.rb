@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   root "categories#index"
+  post '/rate' => 'rater#create', :as => 'rate'
 
   devise_for :users, controllers: {
     registrations: "registrations",

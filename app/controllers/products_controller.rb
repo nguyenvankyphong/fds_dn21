@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   before_action :load_all_products, only: :index
-  before_action :load_product, :build_rate, :load_rates, only: :show
+  # before_action :load_product, :build_rate, :load_rates, only: :show
+  before_action :load_product, only: :show
 
   def index
     @q = Product.ransack(params[:q])
