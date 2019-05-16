@@ -18,9 +18,9 @@ module ApplicationHelper
 
   def render_application
     if user_signed_in? && current_user.admin?
-      render "layouts/admin/application"
+      render "layouts/admin/admin"
     else
-      render "layouts/client/application"
+      render "layouts/client/client_application"
     end
   end
 

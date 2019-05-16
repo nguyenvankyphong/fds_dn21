@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
   before_action :store_user_location!, if: :storable_location?
   before_action :load_list_products, :load_cart, :prepare_sign_up
   before_action :configure_permitted_parameters, if: :devise_controller?
+  before_action :prepare_for_search
 
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale
@@ -53,6 +54,10 @@ class ApplicationController < ActionController::Base
 
   def store_user_location!
     store_location_for(:user, request.fullpath)
+  end
+
+  def prepare_for_search
+    @q = Product.ransack(params[:q])
   end
 
   protected
