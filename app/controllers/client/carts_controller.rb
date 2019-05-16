@@ -1,4 +1,4 @@
-class Client::CartsController < Client::ClientsController
+class Client::CartsController < ApplicationController
   before_action :current_order, only: %i(index create destroy)
   before_action :load_product, only: %i(create destroy)
   before_action :reload_cart, only: :index
@@ -8,6 +8,7 @@ class Client::CartsController < Client::ClientsController
   def index; end
 
   def create
+    binding.pry
     if check_quantity_validation @product
       flash[:danger] = t "flash.out_of_index"
     elsif update_existed_item @product

@@ -5,6 +5,10 @@
       </button>
       <div class="cartbox__inner text-left">
         <div class="cartbox__items">
+          No Item
+          <% unless @items.size %>
+            No Item
+          <% end %>
           <% @items.each do |key, value| %>
             <div class="cartbox__item">
               <div class="cartbox__item__thumb">
@@ -35,10 +39,10 @@
         </div>
         <div class="cartbox__buttons">
 
-          <a class="food__btn" href="client/carts">
+          <a class="food__btn" href="/client/carts">
             <span>View cart</span></a>
           <%= link_to client_orders_path, method: :post, class: "food__btn",
-            data: {confirm: t(".you_sure")} do %>
+            data: {confirm: t("carts.confirm_checkout")} do %>
             <span><%= t "order.order" %></span>
           <% end %>
         </div>

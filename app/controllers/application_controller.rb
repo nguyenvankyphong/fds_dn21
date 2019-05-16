@@ -60,6 +60,10 @@ class ApplicationController < ActionController::Base
     @q = Product.ransack(params[:q])
   end
 
+  def current_order
+    session[:cart] ||= {}
+  end
+
   protected
   def configure_permitted_parameters
     added_attrs = [:email, :password, :remember_me]

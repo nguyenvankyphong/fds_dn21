@@ -1,6 +1,6 @@
 <% provide :title, t("shopping_title") %>
-
   <div class="cart-main-area section-padding--lg bg--white">
+    <h1 class="cart_title">My Order History</h1>
     <div class="container">
       <div class="row">
         <div class="col-md-12 col-sm-12 ol-lg-12">
@@ -46,7 +46,7 @@
             <ul class="cart__btn__list d-flex flex-wrap flex-md-nowrap flex-lg-nowrap justify-content-between">
               <li>
                 <%= link_to client_orders_path, method: :post,
-                  data: {confirm: t(".you_sure")} do %>
+                  data: {confirm: t("carts.confirm_checkout")} do %>
                   <span><%= t "carts.checkout" %></span>
                 <% end %>
               </li>

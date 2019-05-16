@@ -82,6 +82,7 @@ en:
     total: "Total"
     grand_total: "Grand total"
     checkout: "Check out"
+    confirm_checkout: "Would you like to checkout this cart?"
   order:
     order_history: "Order History"
     status: "Status"

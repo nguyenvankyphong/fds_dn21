@@ -567,6 +567,15 @@ $(document).on('turbolinks:load', function() {
     $("#myform").submit();
   });
 
+  function closeBanner() {
+    var closeBtn = $('.banner-close');
+    var banner = $('.fullscreen');
+    closeBtn.on('click', function() {
+      banner.removeClass('show_banner');
+    });
+  }
+  closeBanner();
+
 
 
 

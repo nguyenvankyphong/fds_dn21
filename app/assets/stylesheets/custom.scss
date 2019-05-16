@@ -13,3 +13,22 @@
 .product_image {
   width: 350px;
 }
+
+.banner-close {
+  position: absolute;
+  right: 10px;
+  top: 110px;
+}
+
+.fullscreen {
+  display: none;
+}
+
+.show_banner {
+  display: block !important;
+}
+
+.cart_title {
+  text-align: center;
+  font-family: inherit;
+}

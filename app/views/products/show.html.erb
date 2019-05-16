@@ -36,25 +36,9 @@
                     <span><%= t "products.food_type" %> :
                       <%= @product.category_name %></span></div>
                   <div class="product-quantity">
-                    <form id='myform' method='POST' action='#'>
-                      <div class="product-quantity">
-                        <div class="cart-plus-minus">
-                          <input class="cart-plus-minus-box" type="text" name="qtybutton" value="02">
-                          <div class="add__to__cart__btn">
-                            <a class="food__btn" href="cart.html"> <%= t "products.add_to_cart" %></a>
-                          </div>
-                        </div>
-                      </div>
-                    </form>
-                    <div class="row add_cart_form">
-                      <div class="col-md-4">
-                        <div class="add_form_error">
-                        </div>
-                        <%= render "products/add_form"%>
-                      </div>
-                    </div>
+                    <%= render "add_form" %>
+                  </div>
                 </div>
-              </div>
             </div>
           </div>
         </div>

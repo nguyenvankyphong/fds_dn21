@@ -18,9 +18,11 @@ end
   product_names = ["Black Coffee", "Espresso", "Green Tea", "Black Tea"]
   category_ids = [4, 4, 5, 5]
   price_values = [30000, 40000, 50000, 60000]
+  info = "Thông qua gọi các hàm tạo Job, sẽ sinh ra 1 Hash tương ứng với job, chuyển đổi Hash thành JSON String và đẩy String đấy vào hàng đợi của Redis."
   Product.create!(name: product_names[n],
     price: price_values[n],
     quantity: 10,
+    information: info,
     category_id: category_ids[n])
 end
 
