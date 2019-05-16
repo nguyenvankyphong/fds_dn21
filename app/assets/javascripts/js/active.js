@@ -576,6 +576,27 @@ $(document).on('turbolinks:load', function() {
   }
   closeBanner();
 
+  function toggleProDuctTabs() {
+    var infoTab = $('#nav-all-tab');
+    var reviewTab = $('#nav-breakfast-tab');
+    var infoPage = $('.tab_information');
+    var reviewPage = $('.tab_review');
+    reviewTab.on('click', function() {
+      $(this).addClass('active');
+      infoTab.removeClass('active');
+      infoPage.removeClass('showTab');
+      reviewPage.addClass('showTab');
+    });
+
+    infoTab.on('click', function() {
+      $(this).addClass('active');
+      reviewTab.removeClass('active');
+      reviewPage.removeClass('showTab');
+      infoPage.addClass('showTab');
+    });
+  }
+  toggleProDuctTabs();
+
 
 
 

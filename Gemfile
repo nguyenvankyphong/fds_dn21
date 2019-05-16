@@ -5,6 +5,8 @@ ruby "2.3.1"
 
 gem "devise"
 
+gem "ratyrate"
+
 gem "cancancan"
 
 gem "pry", "~> 0.12.2"
