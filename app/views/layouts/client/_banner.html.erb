@@ -1,0 +1,24 @@
+<div class="slide fullscreen bg-image--1 show_banner">
+  <button class="banner-close">
+    <i class="zmdi zmdi-close"></i>
+  </button>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12">
+        <div class="slider__content">
+          <div class="slider__inner">
+            <h2>“AAHAR”</h2>
+            <h1>food delivery &amp; service</h1>
+            <%= search_form_for @q do |f| %>
+              <div class="slider__input">
+                <%= f.text_field :name_cont, class: "", placeholder: "Type" %>
+
+                <%= f.submit "Search", class: "src__btn res__search" %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<% provide :title, t("categories.client_title") %>
+<% unless @q.conditions.blank? %>
+  <h2>Searching for "<%= params["q"]["name_cont"] %>"</h2>
+<% else %>
+<h1 class="category_title">ALL CATEGORIES</h1>
+<% end %>
+<section class="food__menu__grid__area section-padding--lg">
+  <div class="container">
+    <div class="row mt--30">
+      <%= render @categories %>
+    </div>
+    <div class="row paginate">
+      <%= paginate @categories, theme: "twitter-bootstrap-4" %>
+    </div>
+  </div>
+</section>

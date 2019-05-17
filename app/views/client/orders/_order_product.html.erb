@@ -1,0 +1,21 @@
+  <tr>
+    <td class="order_product">
+      <p class="product-name">
+        <%= link_to product_path(item.product) do %>
+        <%= image_tag item.product_picture.url, class: "order_image" %>
+        <%= item.product_name %>
+      <% end %>
+    </p>
+  </td>
+  <td class="order_price item">
+    <span><%= item.price %></span>
+  </td>
+  <td class="order_quantity item">
+    <span><%= item.quantity %></span>
+  </td>
+  <td class="order_status item">
+    <span><%= item.order_status %>
+      <%= t "generals.on" %>
+      <%= l(item.order_updated_at, format: :short) %></span>
+  </td>
+</tr>

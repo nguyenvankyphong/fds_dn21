@@ -1,0 +1,12 @@
+
+
+  <section class="food__menu__grid__area section-padding--lg">
+    <div class="container">
+      <div class="row mt--30">
+        <%= render @categories %>
+      </div>
+      <div class="row mt--30">
+         <%= render partial: "./products/product", collection: (@products), as: :product %>
+      </div>
+    </div>
+  </section>

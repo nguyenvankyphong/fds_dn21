@@ -1,0 +1,24 @@
+name_length_max: 50
+email_length_max: 255
+password_length_min: 6
+gravatar_size: 80
+remember: "1"
+image_size_by_Mb: 5
+paging: 10
+per_page: 5
+sizeindex: 50
+per_index: 1
+lowest_quantity: 0
+paging_sm: 2
+rate_level: [1, 2, 3, 4, 5]
+rate_standard: 5
+order_status_ready: 0
+order_status_accepted: 1
+order_status_delivering: 2
+order_status_delivered: 3
+order_ready_label: "primary"
+order_accepted_label: "warning"
+order_delivering_label: "info"
+order_delivered_label: "success disabled"
+clasify_food: 2
+clasify_drink: 3

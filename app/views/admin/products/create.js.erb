@@ -1,0 +1,6 @@
+<% if @save %>
+  $('.categories_items').html('<%= j render @products %>');
+  $('.category_new_form').html('');
+<% else %>
+  $('.category_new_form').prepend('<%= j render "./shared/general_error", object: @product %>')
+<% end %>

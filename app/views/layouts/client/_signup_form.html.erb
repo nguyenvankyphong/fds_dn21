@@ -1,0 +1,32 @@
+<%= form_for(:user, url: user_registration_path, method: :post, remote: true) do |f| %>
+  <div id="signup_errors">
+
+  </div>
+  <div class="single-input">
+    <%= f.text_field :name, class: "cr-round--lg", placeholder: true %>
+  </div>
+
+  <div class="single-input">
+    <%= f.email_field :email, class: "cr-round--lg", placeholder: true %>
+  </div>
+
+  <div class="single-input">
+    <%= f.text_field :address, class: "cr-round--lg", placeholder: true %>
+  </div>
+
+  <div class="single-input">
+    <%= f.text_field :phone, class: "cr-round--lg", placeholder: true %>
+  </div>
+
+  <div class="single-input">
+    <%= f.password_field :password, class: "cr-round--lg", placeholder: true %>
+  </div>
+
+  <div class="single-input">
+    <%= f.password_field :password_confirmation, class: "cr-round--lg", placeholder: true %>
+  </div>
+
+  <div class="single-input">
+    <%= f.submit t("helpers.submit.user.create"), class: "food__btn" %>
+  </div>
+<% end %>

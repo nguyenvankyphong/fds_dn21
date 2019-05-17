@@ -1,0 +1,42 @@
+.categories {
+  font-size: 15px;
+  margin-left: 40px;
+  padding-top: 30px;
+
+  .cate_title {
+    text-align: center;
+  }
+
+  a.category_add_btn {
+    font-size: 20px;
+    a.add-btn__text {
+      font-size: 20px
+    }
+  }
+
+  .category__item {
+    height: 300px;
+
+    .category_delete-btn {
+      position: absolute;
+      top: 1px;
+      right: 1px;
+    }
+    .category__item--image {
+      width: 250px;
+      height: 250px;
+    }
+
+    .category__item--name {
+      text-align: center;
+    }
+  }
+
+  .cate_field_name {
+    width: 230px;
+  }
+
+  .cate_field_parent {
+    width: 230px;
+  }
+}

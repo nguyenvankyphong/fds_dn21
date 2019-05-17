@@ -1,0 +1,70 @@
+<% provide :title, t("shopping_title") %>
+  <div class="cart-main-area section-padding--lg bg--white">
+    <h1 class="cart_title">My Cart</h1>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12 ol-lg-12">
+          <form action="#">
+            <div class="table-content table-responsive">
+              <table>
+                <thead>
+                  <tr class="title-top">
+                    <th class="product-thumbnail"><%= t "generals.image" %></th>
+                    <th class="product-name"><%= t "generals.product" %></th>
+                    <th class="product-price"><%= t "products.price" %></th>
+                    <th class="product-quantity"><%= t "products.quantity" %></th>
+                    <th class="product-subtotal"><%= t "carts.total" %></th>
+                    <th class="product-remove"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% @items.each do |key, value| %>
+                    <tr>
+                      <td class="product-thumbnail">
+                        <a href="#"><%= image_tag value[:product].picture.url %></a>
+                      </td>
+                      <td class="product-name">
+                        <a href="#"><%= value[:product].name %></a>
+                      </td>
+                      <td class="product-price">
+                        <span class="amount"><%= value[:product].price %></span></td>
+                      <td class="product-quantity"><%= value[:quantity] %></td>
+                      <td class="product-subtotal"><%= value[:product].price * value[:quantity] %></td>
+                      <td class="product-remove">
+                        <%= link_to client_cart_path(key), method: :delete,
+                          data: {confirm: t("admin.users.index.confirm")} do %>
+                          <span class="glyphicon glyphicon-trash"></span>
+                        <% end %>
+                      </td>
+                    </tr>
+                  <% end %>
+                </tbody>
+              </table>
+            </div>
+          </form>
+          <div class="cartbox__btn">
+            <ul class="cart__btn__list d-flex flex-wrap flex-md-nowrap flex-lg-nowrap justify-content-between">
+              <li>
+                <%= link_to client_orders_path, method: :post,
+                  data: {confirm: t("carts.confirm_checkout")} do %>
+                  <span><%= t "carts.checkout" %></span>
+                <% end %>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 offset-lg-6">
+          <div class="cartbox__total__area">
+            <div class="cartbox-total d-flex justify-content-between">
+            </div>
+            <div class="cart__total__amount">
+              <span><%= t "carts.grand_total" %></span>
+              <span>$<%= @total %></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

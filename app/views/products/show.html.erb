@@ -1,0 +1,104 @@
+<section class="blog__list__view section-padding--lg menudetails-right-sidebar bg--white">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-12 col-sm-12">
+        <div class="food__menu__container">
+          <div class="food__menu__inner d-flex flex-wrap flex-md-nowrap flex-lg-nowrap">
+            <div class="food__menu__thumb">
+              <%= image_tag @product.picture.url, class: "product_image"%>
+            </div>
+            <div class="food__menu__details">
+              <div class="food__menu__content">
+                <h2><%= @product.name %></h2>
+                <ul class="food__dtl__prize d-flex">
+                  <li class="old__prize"><%= @product.price %></li>
+                </ul>
+                <%= render "rate", product: @product %>
+                <p><%= @product.information %></p>
+                <div class="product-action-wrap">
+                  <div class="prodict-statas">
+                    <span><%= t "products.food_type" %>
+                      :
+                      <%= @product.category_name %></span></div>
+                  <div class="product-quantity">
+                    <%= render "add_form" %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="menu__descrive__area">
+            <div class="menu__nav nav nav-tabs" role="tablist">
+              <a class="active" id="nav-all-tab" data-toggle="tab" href="#nav-all" role="tab">
+                <%= t "products.info" %></a>
+              <a id="nav-breakfast-tab" data-toggle="tab" href="#nav-breakfast" role="tab">
+                <%= t "products.reviews" %></a>
+            </div>
+            <div class="menu__nav nav nav-tabs tab_information showTab hideTab">
+              Info
+            </div>
+
+            <div class="menu__tab__content tab-content tab_review hideTab" id="nav-tabContent">
+              <div class="single__dec__content fade" id="nav-breakfast" role="tabpanel">
+                <div class="review__wrapper">
+                  <div class="single__review d-flex">
+                    <div class="">
+                      Quality  :
+                      <%= rating_for @product, "quality", star: 5, enable_half: true, half_show: true, remote: true %>
+                    </div>
+                  </div>
+                  <div class="single__review d-flex">
+                    <div class="review__thumb">
+                      <img src="images/testimonial/rev/1.jpg" alt="review images">
+                    </div>
+                    <div class="review__details">
+                      <h3>Robart Hanson</h3>
+                      <div class="rev__meta d-flex justify-content-between">
+                        <span>Admin - February 13, 2018</span>
+                        <ul class="rating">
+                          <li>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                          </li>
+                          <li>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                          </li>
+                          <li>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                          </li>
+                          <li>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                          </li>
+                          <li>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                          </li>
+                        </ul>
+                      </div>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipis icing elit, sed tdomino eiusd tempor incididunt ut labore et dolore magna aliqua. Ut e veniam, quis nostrud exercitation ullamco laboris nisi ut aliquiconsequat.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div class="popupal__menu">
+              <h4><%= t "products.popular_menu" %></h4>
+            </div>
+          </div>
+        </div>
+        <div class="row mt--30"></div>
+      </div>
+      <div class="col-lg-4 col-md-12 col-sm-12 md--mt--40 sm--mt--40">
+        <div class="food__sidebar">
+          <div class="food__category__area mt--60">
+            <h4 class="side__title">
+              <%= t "generals.categories" %></h4>
+            <ul class="food__category"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

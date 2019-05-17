@@ -1,0 +1,49 @@
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
+@import 'vendor/bootstrap.min';
+@import 'vendor/style';
+@import 'vendor/spacing.min';
+@import 'font-awesome';
+@import 'client/order';
+
+.category_item {
+  margin-top: 0px;
+  visibility: visible;
+  animation-name: fadeInLeft;
+}
+
+.product_image {
+  width: 350px;
+}
+
+.banner-close {
+  position: absolute;
+  right: 10px;
+  top: 110px;
+}
+
+.fullscreen {
+  display: none;
+}
+
+.show_banner {
+  display: block !important;
+}
+
+.cart_title {
+  text-align: center;
+  font-family: inherit;
+}
+
+.hideTab {
+  display: none;
+}
+
+.showTab {
+  display: block !important;
+}
+
+.category_title {
+  text-align: center;
+  padding-top: 30px;
+}

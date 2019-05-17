@@ -1,0 +1,228 @@
+en:
+  error: "Sorry, no data found"
+  error1: "Invalid email/password combination"
+  check: "Please check your email to activate your account."
+  the_form: "The form contains"
+  remember: "Remember me on this computer"
+  update: "Profile updated"
+  delete: "User deleted"
+  undelete: "unsuccess delete"
+  added: "Added"
+  success_add: "Added success"
+  success_delete: "Deleted sucess"
+  not_found_product: "Not found product"
+  out_quantity: "out of quantity"
+  please_order: " - Please order only what's available"
+  shopping_title: "Shopping cart"
+  cart_product: "Cart product"
+  product: "Product"
+  name: "Name"
+  price: "Price"
+  quantity: "Quantity"
+  action: "Action"
+  back: "back"
+  checkout: "checkout"
+  info_product: "Information Product"
+  out: "out of quantity"
+  base:
+    base_title: "Food & Drink"
+  generals:
+    categories: "Categories"
+    category: "Category"
+    products: "Products"
+    product: "Product"
+    order: "Order"
+    order_list: "Order list"
+    users: "Users"
+    food: "Foods"
+    drink: "Drinks"
+    admin: "admin"
+    active: "active"
+    admins: "Administrator"
+    client: "Client"
+    search: "Search"
+    my_history: "History"
+    guest: "Guest"
+    edit: "Edit"
+    on: "on"
+    image: "Image"
+    statistic: "Statistic"
+    suggestion: "Suggestion"
+  flash:
+    created: "Created"
+    not_found: "Not found"
+    action_failed: "Action failed"
+    updated: "Updated"
+    update_fail: "Can not update data"
+    delete_fail: "Can not delete this item"
+    out_of_index: "Out of index"
+    ordered: "Ordered"
+    order_faild: "Can not create order.Plz try again"
+    cannot_save: "Cannot save"
+    no_longer_sold: "Sorry, %{name} is no longer sold"
+    rescue_order_creating: "Oops, Error :((. Try again my fen"
+    rate_success: "You've rated for this product"
+    rate_fail: "Cannot rate for this product"
+  alert:
+    submit_order: "Would you like to submit this cart?"
+  error:
+    image_too_big: "should be less than 5Mb"
+    count_errors:
+      one: "The form contains 1 error"
+      other: "The form contains %{count} errors"
+  categories:
+    category_name: "Category name"
+    admin_title: "Category | Admin"
+    client_title: "Category | Client"
+    add_new: "Add new category"
+    relate_category: "Related Category"
+    all_categories: "All Categories"
+  carts:
+    currency: "$"
+    total: "Total"
+    grand_total: "Grand total"
+    checkout: "Check out"
+    confirm_checkout: "Would you like to checkout this cart?"
+  order:
+    order_history: "Order History"
+    status: "Status"
+    order: "Order"
+    mailer:
+      hi: "Hi,"
+      new_order: "FDS received a new order from"
+      with: "with:"
+      total_cost: "Total cost:"
+      ordered_at: "Order at:"
+      subject: "New order from"
+  rating:
+    rate: "Rate"
+    no_rating: "This product hasn't had any rate yet."
+    show_status:
+      zero: "This product hasn't had any rate yet."
+      one: "%{count}/%{standard}"
+      other: "%{count}/%{standard}"
+    comments:
+      zero: "No comment"
+      one: "Comment(1)"
+      other: "Comments(%{count})"
+  products:
+    add_new: "Add new product"
+    name: "Name"
+    info: "Information"
+    price: "Price"
+    quantity: "Quantity"
+    no_img: "No image"
+    admin_title: "Product | Admin"
+    client_title: "Product | Client"
+    add_to_cart: "Add to cart"
+    number: "number"
+    add: "Add"
+    food_type: "Type:"
+    review: "Review"
+    popular_menu: "Popular Menu"
+  users:
+    user_pic: "User picture"
+    new:
+      name: "Name"
+      email: "Email"
+      password: "Password"
+      password_confirmation: "Password_confirmation"
+      create: "Create my account"
+      address: "Address"
+      phone: "Phone"
+    edit:
+      edit: "Edit user"
+      save: "Save changes"
+      update: "Update your profile"
+      change: "Change"
+    index:
+      all: "All users"
+  static_pages:
+    home: "Home"
+    contact: "Contact"
+    signup: "Sign up"
+    signin: "Sign in"
+    welcome: "Welcome to FDS!"
+    sign: "Sign up now!"
+    users: "Users"
+    account: "Account"
+    profile: "Profile"
+    settings: "Settings"
+    logout: "Logout"
+    login: "Login"
+  layouts:
+    header:
+      title4: "Log in"
+    footer:
+      copywrite: "Copywrite by: OE21 - Ruby Teams"
+    sidebar:
+      all_products: "All Products"
+    client_sidebar:
+      cart: "Cart"
+      items: "%{item} Item(s)"
+  sessions:
+    new:
+      new_user: "New user? "
+  helpers:
+    label:
+      user:
+        name: "Name"
+        email: "Email"
+        address: "Address"
+        phone: "Phone"
+        password: "Password"
+        password_confirmation: "Password Confirmation"
+      product:
+        name: "Name"
+        information: "Infomation"
+        price: "Price"
+        quantity: "Quantity"
+    placeholder:
+      product:
+        name: "Name"
+        information: "Infomation"
+        price: "Price"
+        quantity: "Quantity"
+    submit:
+      user:
+        create: "Create my account"
+        submit: "Submit"
+      category:
+        submit: "Submit"
+  admin:
+    users:
+      index:
+        all: "All users"
+        name: "NAME"
+        action: "ACTION"
+        index: "NO."
+        address: "ADDRESS"
+        phone: "PHONE"
+        email: "EMAIL"
+        delete_u: "delete"
+        confirm: "You sure?"
+      show:
+        social: "Social"
+        twitter: "Twitter"
+        google: "Google +"
+        facebook: "Facebook"
+  time:
+    formats:
+      default: "%a, %d %b %Y %H:%M:%S %z"
+      long: "%B %d, %Y %H:%M"
+      short: "%d %b %H:%M"
+  number:
+    currency:
+      format:
+        delimiter: "."
+        format: "%n %u"
+        precision: 0
+        separator: ","
+        significant: false
+        strip_insignificant_zeros: false
+        unit: "đồng"
+  devise:
+    reset_password:
+      title: "Reset Password"
+    confirm:
+      re-confirm: "Resend Confimation Link"

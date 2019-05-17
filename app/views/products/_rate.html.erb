@@ -1,0 +1,21 @@
+<% if product.average("quality") %>
+  <% arr = rate_rounding(product.average("quality").avg) %>
+
+  <ul class="rating">
+    <% arr.first.to_i.times do |num| %>
+      <li>
+        <i class="fa fa-star"></i>
+      </li>
+    <% end %>
+    <% arr.second.to_i.times do |num| %>
+      <li>
+        <i class="fa fa-star-half"></i>
+      </li>
+    <% end %>
+    <% arr.third.to_i.times do |num| %>
+      <li class="rating__opasity">
+        <i class="fa fa-star"></i>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
