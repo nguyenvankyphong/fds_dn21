@@ -1,14 +1,16 @@
   <%= form_for(@category, url: admin_categories_path) do |f| %>
   <div class="col-md-3">
     <div class="field">
-      <%= f.text_area :name %>
+      <%= f.text_field :name, class: "cate_field_name" %>
     </div>
-    <span class="picture">
-      <%= f.file_field :picture %>
-    </span>
+    </div>
+    <div class="col-md-3 cate_field_parent">
+      <%= f.select :parent_id, load_categories(@categories) %>
     </div>
     <div class="col-md-3">
-      <%= f.select :parent_id, load_categories(@categories) %>
+      <span class="picture">
+        <%= f.file_field :picture %>
+      </span>
     </div>
     <div class="col-md-3">
       <%= f.submit t("helpers.submit.category.submit"), class: "btn btn-primary" %>

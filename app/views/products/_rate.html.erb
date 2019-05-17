@@ -1,5 +1,5 @@
-<% if @product.average("quality") %>
-  <% arr = rate_rounding(@product.average("quality").avg) %>
+<% if product.average("quality") %>
+  <% arr = rate_rounding(product.average("quality").avg) %>
 
   <ul class="rating">
     <% arr.first.to_i.times do |num| %>

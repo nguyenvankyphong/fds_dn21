@@ -5,6 +5,6 @@
   <%= link_to admin_product_path(product), method: :delete, remote: true, class: "category_delete-btn" do %>
     <span class="glyphicon glyphicon-remove"></span>
   <% end %>
-<%= image_tag product.picture.url if product.picture? %>
+<%= image_tag product.picture.url %>
 <div><%= product.price %></div>
 </div>

@@ -2,7 +2,7 @@
   <section class="sidebar" style="height: auto;">
     <div class="user-panel">
       <div class="pull-left image">
-        <img src="#" class="img-circle">
+        <%= gravatar_for current_user %>
       </div>
       <div class="pull-left info">
         <p><%= current_user.name %></p>
@@ -22,7 +22,7 @@
       </div>
     </form>
     <ul class="sidebar-menu tree" data-widget="tree">
-      <li class="active treeview menu-open">
+      <li class="treeview menu-open">
         <a href="/admin/categories">
           <i class="fa fa-dashboard"></i>
           <span><%= t "generals.categories" %></span>
@@ -41,7 +41,7 @@
               <i class="fa fa-circle-o"></i>
               <%= t "generals.food" %></a>
           </li>
-          <li class="active">
+          <li class="">
             <a href="/admin/categories/3">
               <i class="fa fa-circle-o"></i>
               <%= t "generals.drink" %></a>
@@ -49,7 +49,13 @@
         </ul>
       </li>
       <li>
-        <a href="/admin/orders">
+        <a href="/admin/products" class="aside_order">
+          <i class="fa fa-th"></i>
+          <span>Products</span>
+        </a>
+      </li>
+      <li>
+        <a href="/admin/orders" class="aside_order">
           <i class="fa fa-th"></i>
           <span><%= t "generals.order_list" %></span>
           <span class="pull-right-container">

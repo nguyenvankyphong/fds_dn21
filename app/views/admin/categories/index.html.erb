@@ -1,6 +1,7 @@
 <% provide :title, t("categories.admin_title") %>
   <div class="containter">
     <div class="categories">
+      <h1 class="cate_title">MANAGE CATEGORIES</h1>
       <%= link_to new_admin_category_path, remote: true, class: "category_add-btn" do %>
         <span class="glyphicon glyphicon-plus"></span>
         <%= t "categories.add_new" %>
@@ -9,7 +10,16 @@
       <div class="category_new_form"></div>
     </div>
     <div class="row categories_items">
-      <%= render @categories %>
+      <% @parents_cate.map do |item| %>
+        <div class="row">
+          <%= render "category", category: item %>
+        </div>
+        <div class="row post clearfix">
+          <% @child_cate[item.id].map do |sub_item| %>
+            <%= render "category", category: sub_item %>
+          <% end %>
+        </div>
+      <% end %>
     </div>
     <div class="row paginate">
       <%= paginate @categories, theme: "twitter-bootstrap-4" %>

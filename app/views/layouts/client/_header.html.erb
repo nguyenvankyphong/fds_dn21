@@ -17,9 +17,9 @@
                   <a href="/"><%= t "static_pages.home" %></a>
                 </li>
                 <li class="drop">
-                  <a href="menu-list.html"><%= t "generals.food" %></a>
+                  <a href="/categories/2"><%= t "generals.food" %></a>
                   <ul class="dropdown__menu">
-                    <% foods.map do |drink| %>
+                    <% foods.map do |food| %>
                       <li>
                         <%= link_to food.name, category_path(food) %>
                       </li>
@@ -27,7 +27,7 @@
                   </ul>
                 </li>
                 <li class="drop">
-                  <a href="menu-list.html"><%= t "generals.drink" %></a>
+                  <a href="/categories/3"><%= t "generals.drink" %></a>
                   <ul class="dropdown__menu">
                     <% drinks.map do |drink| %>
                       <li>

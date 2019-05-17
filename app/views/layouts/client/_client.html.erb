@@ -4,6 +4,7 @@
   <div class="">
     <%= yield %>
   </div>
+  <%= render "layouts/client/footer" %>
   <%= render "layouts/client/login_form" %>
   <%= render "layouts/client/cart", items: @items %>
 </div>

@@ -8,7 +8,6 @@ class Client::CartsController < ApplicationController
   def index; end
 
   def create
-    binding.pry
     if check_quantity_validation @product
       flash[:danger] = t "flash.out_of_index"
     elsif update_existed_item @product

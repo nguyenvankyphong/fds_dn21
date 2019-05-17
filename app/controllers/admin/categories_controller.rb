@@ -1,8 +1,21 @@
 class Admin::CategoriesController < Admin::AdminsController
-  before_action :load_category, only: :destroy
+  before_action :load_category, only: [:destroy, :show]
   before_action :load_all_categories, only: [:index, :new, :destroy]
 
-  def index; end
+  def index
+    @parents = Category.pluck(:parent_id).uniq
+    @child_cate = {}
+    @parents.each do |item|
+      @child_cate[item] = Category.where parent_id: item
+    end
+
+    @parents_cate = Category.where id: @parents
+  end
+
+  def show
+    @child = Category.where parent_id: @category.id
+    @products = Product.where category_id: @category.id
+  end
 
   def new
     @category = Category.new

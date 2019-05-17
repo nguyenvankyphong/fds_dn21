@@ -1,7 +1,11 @@
 <div class="col-md-3 category__item">
-  <div><%= category.name %></div>
-  <%= link_to admin_category_path(category), method: :delete, remote: true, class: "category_delete-btn" do %>
-    <span class="glyphicon glyphicon-remove"></span>
+  <%= link_to admin_category_path(category) do %>
+    <h4 class="category__item--name"><%= category.name %></h4>
   <% end %>
-  <%= image_tag category.picture.url %>
+  <% unless [1,2,3].include? category.id  %>
+    <%= link_to admin_category_path(category), method: :delete, remote: true, class: "category_delete-btn" do %>
+      <span class="fa fa-times"></span>
+    <% end %>
+  <% end %>
+  <%= image_tag category.picture.url, class: "category__item--image" %>
 </div>
